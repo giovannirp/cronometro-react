@@ -1,15 +1,7 @@
+import { ITarefa } from "../../types/ITarefas";
 import Item from "./Item";
 
-function Lista() {
-  const tarefas = [
-    {
-      tafefa: 'React',
-      tempo: '02:00:00'
-    }, {
-      tarefa: 'JavaScript',
-      tempo: '01:00:03'
-    }
-  ];
+function Lista( { tarefas }: {tarefas: ITarefa[]}) {
   return (
     <aside>
       <h2>Tarefas do Dia</h2>
@@ -17,7 +9,7 @@ function Lista() {
         {tarefas.map((item, index) => (
           <Item
             key={index}
-            tarefa={item.tafefa}
+            tarefa={item.tarefa}
             tempo={item.tempo}
           />
         ))}
