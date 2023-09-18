@@ -8,7 +8,7 @@ export default function Item(props: ITarefa) {
   });
   
   return (
-    <li>
+    <li className="item">
       <h3>{tarefa}</h3>
       <span>{tempo}</span>
     </li>
