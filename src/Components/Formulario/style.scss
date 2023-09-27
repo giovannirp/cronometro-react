@@ -1,0 +1,30 @@
+.form-list {
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      display: block;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="time"] {
+      border: 1px solid rgb(147, 146, 146);
+      padding: 8px;
+      margin: 0 0 15px 15px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    button {
+      margin: 0 0 15px 15px;
+      max-width: 200px;
+      height: 30px;
+      background: rgb(14, 10, 136);
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}

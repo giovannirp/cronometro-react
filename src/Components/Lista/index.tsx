@@ -1,9 +1,10 @@
 import { ITarefa } from "../../types/ITarefas";
 import Item from "./Item";
+import "./styles.scss";
 
 function Lista( { tarefas }: {tarefas: ITarefa[]}) {
   return (
-    <aside>
+    <aside className="list">
       <h2>Tarefas do Dia</h2>
       <ul>
         {tarefas.map((item, index) => (

@@ -3,6 +3,7 @@ import "./App.css";
 import Lista from './Components/Lista';
 import { useState } from 'react';
 import { ITarefa } from './types/ITarefas';
+import "./App.scss";
 
 function App() {
   const [tarefas, setTarefas] = useState([
