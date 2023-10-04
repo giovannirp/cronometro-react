@@ -7,21 +7,25 @@ import Cronometro from './Components/Cronometro';
 import { ITarefa } from './types/ITarefas';
 
 function App() {
-  const [tarefas, setTarefas] = useState<ITarefa[] | []>([
-    {
-      tarefa: 'React',
-      tempo: '02:00:00'
-    }, {
-      tarefa: 'JavaScript',
-      tempo: '01:00:03'
-    }
-  ]);
+  const [tarefas, setTarefas] = useState<ITarefa[] | []>([]);
+  const [selecionado, setSelecionado] = useState<ITarefa>();
+
+  function selecionaTarefa(tarefaSelecionada: ITarefa) {
+    setSelecionado(tarefaSelecionada);
+    setTarefas(tarefasAnteriores => tarefasAnteriores.map((tarefa) => ({
+      ...tarefa,
+      selecionado: tarefa.id === tarefaSelecionada.id ? true : false
+    })))
+  }
 
   return (
     <div className='container'>
       <Formulario setTarefas={setTarefas} />
       <hr />
-      <Lista tarefas={tarefas} />
+      <Lista 
+        tarefas={tarefas}
+        selecionaTarefa={selecionaTarefa}
+      />
       <hr />
       <Cronometro />
     </div>

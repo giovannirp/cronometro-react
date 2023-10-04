@@ -4,5 +4,11 @@
   li {
     list-style: none;
     padding-top: 20px;
+    padding: 10px;
   }
+}
+
+.itemSelecionado {
+  background-color: #cdc6c6;
+  box-shadow: 2px 4px 4px #0000009F inset;
 }
