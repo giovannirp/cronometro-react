@@ -12,14 +12,17 @@ export default function Item({
   });
   
   return (
-    <li 
-      className={`${"item"} ${selecionado ? "itemSelecionado" : ""}`}
-      onClick={() => selecionaTarefa(
-        {tarefa, tempo, selecionado, completado, id}
-      )}
-    >
-      <h3>{tarefa}</h3>
-      <span>{tempo}</span>
-    </li>
+    <>
+      <li 
+        className={`${"item"} ${selecionado ? "itemSelecionado" : ""}`}
+        onClick={() => selecionaTarefa(
+          {tarefa, tempo, selecionado, completado, id}
+        )}
+      >
+        <h3>{tarefa}</h3>
+        <span>{tempo}</span>
+      </li>
+    </>
+
   )
 }

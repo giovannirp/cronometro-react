@@ -5,6 +5,7 @@ import { useState } from 'react';
 import "./App.scss";
 import Cronometro from './Components/Cronometro';
 import { ITarefa } from './types/ITarefas';
+import Header from './Components/Header';
 
 function App() {
   const [tarefas, setTarefas] = useState<ITarefa[] | []>([]);
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className='container'>
+      <Header titulo="Cronômetro" />
       <Formulario setTarefas={setTarefas} />
       <hr />
       <Lista 
