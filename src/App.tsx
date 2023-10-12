@@ -21,7 +21,11 @@ function App() {
 
   return (
     <div className='container'>
-      <Header titulo="Cronômetro" />
+      <Header 
+        titulo="Cronômetro" 
+        subTitulo="Acertando sua hora"
+        linkTitle="#" 
+      />
       <Formulario setTarefas={setTarefas} />
       <hr />
       <Lista 
