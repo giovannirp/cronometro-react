@@ -14,7 +14,7 @@ export default function Item({
   return (
     <>
       <li 
-        className={`${"item"} ${selecionado ? "itemSelecionado" : ""}`}
+        className={`${"item"} ${selecionado ? "itemSelecionado" : ""} ${completado ? "itemCompletado" : ''}`}
         onClick={() => selecionaTarefa(
           {tarefa, tempo, selecionado, completado, id}
         )}

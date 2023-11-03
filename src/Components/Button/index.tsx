@@ -1,12 +1,15 @@
 import { Component } from "react";
-interface BotaoProps extends React.ButtonHTMLAttributes<HTMLAnchorElement> {}
+// interface BotaoProps extends React.ButtonHTMLAttributes<HTMLAnchorElement> {}
 
-class Botao extends Component <BotaoProps> {
+class Botao extends Component <{
+  type?: "button" | "submit" | "reset" | undefined,
+  onClick?: () => void,
+}> {
   render() {
-    const { children, type ="button"} = this.props;
+    const { children, type ="button", onClick } = this.props;
 
     return (
-      <button type={type} >
+      <button onClick={onClick} type={type} >
         {children}
       </button>
     )
